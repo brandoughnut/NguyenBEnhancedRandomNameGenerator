@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Enhanced RNG</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  </head>
+  <body>
+    
+
+    <div class="container-fluid py-5" style="background-image: url(./assets/pokemonicebg.png); background-repeat: no-repeat; background-size: cover;">
+        <div class="row mb-5">
+            <div class="col text-center">
+                <h1>RANDOM NAME GENERATOR</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col text-center">
+                <div class="mb-3">
+                    <input id="inputField" type="text" style="width: 69%; height: 40px; border-radius: 10px;" placeholder="Name Here"/>
+                </div>
+                <div class="mt-4">
+                    <button id="inputBtn" type="button" class="btn btn-dark" style="width: 69%;">Add Name</button>
+                </div>
+            </div>
+            <div class="col text-center">
+                <div class="mb-4 d-flex justify-content-center mt-2">
+                    <p class="m-0 d-flex align-items-center">Group Size</p>
+                    <input id="length" style="width: 40%;" type="range" class="mx-3" min="0" max="5" value="0"/>
+                    <p class="m-0 d-flex align-items-center" id="number">0</p>
+                </div>
+                <div class="" style="margin-top: 35px;">
+                    <!-- Button trigger modal -->
+                <button id="groupBtn" style="width: 69%;" type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Get Random Groups
+                </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid" style="height: 100vh; background-color: #FCE4C4;">
+
+        <div class="row text-center">
+            <p class="mt-4" id="totalNames">Total Names: </p>
+            <div class="col text-center" id="injectName">
+
+
+    
+
+
+            </div>
+        </div>
+
+    </div>
+
+
+<!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Groups</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div id="groupText" class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script type="module" src="./scripts/app.js"></script>
+  </body>
+</html>
