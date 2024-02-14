@@ -120,20 +120,18 @@ const groupPeople = (name) => {
     if (currentGroup.length > 0) {
         groups.push(currentGroup);
     }
+    
+    if(groups[groups.length-1].length == 1){
+        let lastPerson = groups.pop();
+        groups[groups.length-1].push(lastPerson);
+    }
 
-    let newArr = [];
     for(let i = 0; i< groups.length; i++){
         let div = document.createElement('div');
         if(groups[i].length > 1){
             div.textContent = `Group ${i+1}: ${groups[i].join(" ")}`;
-            newArr.push(`Group ${i+1}: ${groups[i].join(" ")}`);
             groupText.appendChild(div);
         }
-        // else{
-        //     newArr.push(`Group ${i}: ${[...groups[i-1], ...groups[groups.length-1]].join(" ")}`);
-        //     div.textContent = `Group ${i}: ${[...groups[i-1], ...groups[groups.length-1]].join(" ")}`;
-        //     groupText.appendChild(div);
-        // }
 
     }
 
